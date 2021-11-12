@@ -1,0 +1,71 @@
+<ion-content class="login">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center outside">
+      <ion-col size="12" class="ion-align-self-center">
+        <ion-card class="tc-card card-title">
+          <h2>Inicia sesión</h2>
+        </ion-card>
+
+        <ion-card class="tc-card extra_padd">
+          <div class="sub_title">
+            <p>Exclusivo para trabajadores de Mineria Centinela</p>
+          </div>
+
+          <form #form="ngForm" [formGroup]="loginForm">
+            <ion-grid>
+              <ion-row class="ion-justify-content-center">
+                <ion-col class="ion-align-self-center" size="12">
+                  <p>Correo electrónico</p>
+                  <ion-item>
+                    <img src="/assets/icon/mail.png" alt="Icono de correo" />
+                    <ion-input
+                      formControlName="email"
+                      name="email"
+                      (ionFocus)="onInputFocus($event)"
+                      (ionChange)="onInputChange($event)"
+                      placeholder="Correo electrónico"
+                      required
+                    ></ion-input>
+                  </ion-item>
+
+                  <p>Contraseña</p>
+                  <ion-item>
+                    <img src="/assets/icon/key.png" alt="Icono de llave" />
+                    <ion-input
+                      formControlName="password"
+                      name="password"
+                      (ionFocus)="onInputFocus($event)"
+                      (ionChange)="onInputChange($event)"
+                      placeholder="Contraseña"
+                      clearOnEdit="false"
+                      type="clave"
+                      required
+                    ></ion-input>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </form>
+        </ion-card>
+
+        <ion-button
+          expand="block"
+          size="large"
+          type="submit"
+          fill="solid"
+          [disabled]="loginForm.invalid"
+          (click)="login()"
+        >
+          <span>Iniciar sesión</span>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row
+      *ngIf="enableKeyboard"
+      class="keyboard ion-align-items-center ion-justify-content-center"
+    >
+      <div class="simple-keyboard"></div>
+    </ion-row>
+  </ion-grid>
+</ion-content>

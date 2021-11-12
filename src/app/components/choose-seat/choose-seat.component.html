@@ -1,0 +1,98 @@
+<ion-grid class="choose-seat ion-no-padding">
+  <ion-row class="ion-justify-content-center">
+    <ion-col class="ion-align-self-center ion-no-padding" size="12">
+      <ion-item class="tc-service">
+        <ion-row class="ion-padding-vertical ion-justify-content-center">
+          <ion-col class="ion-align-self-center" size="2">
+            <div class="ion-text-right">
+              <p>{{ service.horaSalida }}</p>
+              <p>{{ service.terminalOrigen }}</p>
+            </div>
+          </ion-col>
+
+          <ion-col class="col_icon ion-padding-horizontal ion-align-self-center" size="3">
+            <img src="/assets/icon/from-to.png" alt="Icon from-to" />
+          </ion-col>
+
+          <ion-col class="ion-align-self-center" size="3">
+            <div class="ion-text-left">
+              <p>{{ service.horaLlegada }}</p>
+              <p>{{ service.terminalDestino }}</p>
+            </div>
+          </ion-col>
+
+          <ion-col class="col_price ion-align-self-center" size="3">
+            <p>Desde</p>
+            <p>${{ priceSelectedSeat() }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+
+      <div *ngIf="floors.length; else loading">
+        <ion-card *ngFor="let seatsCol of floors; let i = index">
+          <ion-card-header>
+            <ion-card-subtitle>
+              {{
+                i === 0
+                  ? 'Piso 1: ' + service.servicioPrimerPiso
+                  : 'Piso 2: ' + service.servicioSegundoPiso
+              }}
+            </ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-row class="seats-container ion-padding-vertical">
+            <ion-col class="seats-col" *ngFor="let seatsRow of seatsCol; let j = index">
+              <div
+                *ngFor="let seat of seatsRow; let k = index"
+                class="seats-row"
+                [ngClass]="{
+                  taked: seat.estado === 'tomado',
+                  space: !hasSeat(seat.estado),
+                  bath: hasBath(seat.asiento),
+                  loading: seat.estado === 'loading'
+                }"
+                (click)="
+                  !this.loadingSeat &&
+                    hasSeat(seat.estado, 'ocupado') &&
+                    takeLiberateSeat(seatsCol, seat, i)
+                "
+              >
+                <img
+                  [attr.src]="getIconSeat(seat.estado)"
+                  [attr.alt]="
+                    hasSeat(seat.estado) ? 'Asiento ' + seat.asiento : seat.estado
+                  "
+                />
+                <ion-spinner name="crescent"></ion-spinner>
+                <span *ngIf="seat.asiento !== '%'">{{ seat.asiento }}</span>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </div>
+
+      <ng-template #loading>
+        <ion-progress-bar type="indeterminate"></ion-progress-bar>
+      </ng-template>
+
+      <ion-card *ngIf="floors.length" class="legend">
+        <ion-row>
+          <ion-col>
+            <img [attr.src]="getIconSeat('libre')" alt="Icono Asiento libre" />
+            <span>Asiento disponible</span>
+          </ion-col>
+
+          <ion-col>
+            <img [attr.src]="getIconSeat('tomado')" alt="Icono Asiento tomado" />
+            <span>Asiento seleccionado</span>
+          </ion-col>
+
+          <ion-col>
+            <img [attr.src]="getIconSeat('ocupado')" alt="Icono Asiento ocupado" />
+            <span>Asiento reservado</span>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>

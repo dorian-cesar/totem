@@ -1,0 +1,32 @@
+ion-app {
+  background: url('/assets/images/fondo.png') no-repeat center center / cover;
+
+  .header {
+    height: 75px;
+    margin: 80px auto;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  ion-footer {
+    padding: 20px;
+    z-index: -1;
+
+    span {
+      color: #fff;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    img {
+      width: 68px;
+      height: 29px;
+    }
+
+    &::before {
+      content: none;
+    }
+  }
+}

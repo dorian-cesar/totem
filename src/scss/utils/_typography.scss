@@ -1,0 +1,14 @@
+$name-font-regular: 'SF-Pro-Display-Regular';
+$name-font-bold: 'SF-Pro-Display-Bold';
+
+@font-face {
+  src: url($path-fonts + '#{$name-font-regular}.ttf') format('truetype');
+  font-family: $name-font-regular;
+  font-weight: 400;
+}
+
+@font-face {
+  src: url($path-fonts + '#{$name-font-bold}.ttf') format('truetype');
+  font-family: $name-font-bold;
+  font-weight: 700;
+}

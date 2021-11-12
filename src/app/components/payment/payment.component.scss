@@ -1,0 +1,38 @@
+.tc-card:not(.payment) {
+  margin-top: 50%;
+}
+
+.payment {
+  ion-col {
+    text-align: center;
+
+    p {
+      text-align: center;
+      color: #fff;
+      font-family: 'SF-Pro-Display-Bold';
+      font-size: 48px;
+    }
+
+    img {
+      width: 300px;
+      margin: auto;
+    }
+  }
+
+  .tickets {
+    margin-top: 70px;
+    padding: 0 40px;
+    color: #ebf3ff;
+    text-align: left;
+    font-size: 30px;
+
+    span {
+      color: #003fa2;
+      font-family: 'SF-Pro-Display-Bold';
+    }
+
+    hr {
+      background: #ebf3ff;
+    }
+  }
+}

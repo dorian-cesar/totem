@@ -1,0 +1,146 @@
+.confirmation {
+  p.travel-type {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 32px;
+    font-family: 'SF-Pro-Display-Bold';
+  }
+
+  .ticket-list {
+    margin-bottom: 10px;
+  }
+
+  ion-card {
+    height: 330px;
+    margin-bottom: 5px;
+    border: 2px solid #003fa2;
+    border-radius: 15px;
+
+    &.ticket-container {
+      background: #ebf3ff;
+
+      p {
+        margin: 0;
+      }
+
+      ion-card-header {
+        height: 1rem;
+        padding-bottom: 30px;
+        background: #003fa2;
+
+        ion-card-subtitle {
+          margin-top: -5px;
+          margin-bottom: 10px;
+
+          color: #fff;
+          text-align: center;
+          font-size: 26px;
+          font-family: 'SF-Pro-Display-Bold';
+        }
+      }
+
+      .ticket {
+        padding-top: 7px;
+
+        .data {
+          p {
+            font-size: 22px;
+
+            &.title {
+              color: #6194e5;
+              font-family: 'SF-Pro-Display-Bold';
+            }
+
+            &.description {
+              color: #003fa2;
+            }
+          }
+        }
+
+        .price {
+          height: 100%;
+
+          p {
+            .subtotal {
+              color: #003fa2;
+              font-size: 26px;
+              font-family: 'SF-Pro-Display-Bold';
+            }
+
+            .price {
+              color: #003fa2;
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+
+    &.vuelta {
+      margin-top: -10px;
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+
+      ion-row {
+        height: 100%;
+      }
+
+      ion-button {
+        --background: transparent;
+        --color: #003fa2;
+        --box-shadow: none;
+
+        height: 81px;
+        border: 2px solid #003fa2;
+        border-radius: 41px;
+        font-size: 26px;
+        text-transform: none;
+      }
+    }
+  }
+}
+
+.total {
+  color: #fff;
+  font-weight: 700;
+
+  .discount-title {
+    font-size: 32px;
+    font-family: 'SF-Pro-Display-Bold';
+    margin: 0 0 10px 10px;
+  }
+
+  ion-card {
+    height: auto;
+    padding: 20px;
+    background: #ebf3ff;
+
+    p {
+      margin: 0;
+      color: #003fa2;
+      font-size: 26px;
+
+      &.subtotal {
+        font-size: 32px;
+        text-decoration: line-through;
+      }
+
+      &.discount {
+        color: #e75f00;
+        font-size: 32px;
+        font-family: 'SF-Pro-Display-Bold';
+      }
+
+      &.total-text {
+        font-size: 48px;
+      }
+
+      &.total {
+        font-size: 48px;
+        font-family: 'SF-Pro-Display-Bold';
+      }
+    }
+  }
+}

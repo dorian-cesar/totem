@@ -1,0 +1,486 @@
+{
+  "1": [
+    [
+      {
+        "asiento": "B2",
+        "estado": "sinasiento",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "B1",
+        "estado": "sinasiento",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "sinasiento",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "%",
+        "estado": "sinasiento",
+        "asientoAsociado": null,
+        "tipo": null
+      }
+    ],
+    [
+      {
+        "asiento": "1",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "2",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "sinasiento",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "3",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      }
+    ],
+    [
+      {
+        "asiento": "4",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "5",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "sinasiento",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "6",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      }
+    ],
+    [
+      {
+        "asiento": "7",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "8",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "sinasiento",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "9",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      }
+    ]
+  ],
+  "2": [
+    [
+      {
+        "asiento": "21",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "22",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "23",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "24",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      }
+    ],
+    [
+      {
+        "asiento": "25",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "26",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "27",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "28",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      }
+    ],
+    [
+      {
+        "asiento": "29",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "30",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "31",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "32",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      }
+    ],
+    [
+      {
+        "asiento": "33",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "34",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "35",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "36",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      }
+    ],
+    [
+      {
+        "asiento": "37",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "38",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "39",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "40",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      }
+    ],
+    [
+      {
+        "asiento": "41",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "42",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "43",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "44",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      }
+    ],
+    [
+      {
+        "asiento": "45",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "46",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "47",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "48",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      }
+    ],
+    [
+      {
+        "asiento": "49",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "50",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "51",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "52",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      }
+    ],
+    [
+      {
+        "asiento": "53",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "54",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "55",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "56",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      }
+    ],
+    [
+      {
+        "asiento": "57",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "58",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "59",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "60",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      }
+    ],
+    [
+      {
+        "asiento": "61",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "62",
+        "estado": "libre",
+        "asientoAsociado": "",
+        "tipo": null
+      },
+      {
+        "asiento": "",
+        "estado": "pasillo",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "B2",
+        "estado": "sinasiento",
+        "asientoAsociado": null,
+        "tipo": null
+      },
+      {
+        "asiento": "B1",
+        "estado": "sinasiento",
+        "asientoAsociado": null,
+        "tipo": null
+      }
+    ]
+  ]
+}

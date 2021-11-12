@@ -1,0 +1,31 @@
+.choose-travel {
+  ion-item.travel-type {
+    --background: transparent;
+    --color: #003fa2;
+
+    margin: 0 20px;
+    padding: 0px;
+    text-align: center;
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+
+    ion-select {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  form {
+    p {
+      margin-top: 0;
+      margin-bottom: 5px;
+      color: #fff;
+      font-size: 32px;
+    }
+
+    ion-item {
+      margin-bottom: 50px;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+<ion-card class="tc-card" [hidden]="step === 3">
+  <ion-grid class="payment" (click)="nextStep()">
+    <ion-row>
+      <ion-col [hidden]="step !== 1" size="12">
+        <p>POR FAVOR, INSERTE LA TARJETA</p>
+        <img src="/assets/icon/insert-card.svg" alt="Icono tarjeta" />
+      </ion-col>
+
+      <ion-col [hidden]="step !== 2" size="12">
+        <p>TRANSACCIÓN APROBADA</p>
+        <img src="/assets/icon/approve.svg" alt="Icono de aprobación" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+
+<ion-card class="tc-card payment" [hidden]="step !== 3" size="12">
+  <ion-grid class="payment" (click)="nextStep()">
+    <ion-row>
+      <ion-col>
+        <p>RETIRE EL BOLETO</p>
+        <img src="/assets/icon/paper-bill.svg" alt="Icono de boleto" />
+
+        <div class="tickets" *ngFor="let transaction of transactions; let i = index">
+          <!-- TODO: mostrar los datos de una forma mas eficiente
+            asiento: "9"
+            boleto: "INT00081095"
+            clase: "SAL12"
+            cliente: "MICHEL.SOTO@CLAMBER.CL"
+            codigoSeguridad: "757933"
+            codigoTerminalDestino: "XB"
+            codigoTerminalOrigen: "BS"
+            codigoTransaccion: "MVT64698507"
+            condicionesDeServicio: "Válido para la fecha y hora señalada.\nAnulaciones: Boleto sólo se puede anular por internet, la anulación se aceptará hasta 4 horas antes del viaje y se\ndevolverá el 85% del valor del pasaje (Art.67 D.S 212/92 MTT)\nTransporte de equipaje libre de pago (según D.S 212/92 MTT):\nEn el interior del bus: 1 bolso de mano de uso personal\nEn la maletera del bus: 1 maleta o bolso que no supere los 30 kgs. o los 18 decímetros Cúbicos\nSi el valor de su equipaje excede las 5 UTM, es su obligación declararlo previamente en la oficina de origen (Art. 70 D.S\n212/92 MTT)\nLa empresa no se hace responsable por pérdidas que puedan ocurrir al interior del bus.\nPara consultas puede llamar a nuestro Call Center al 600 600 0018 de lunes a domingo de 08:00 a 21:00 horas"
+            diaSemana: "MIERCOLES"
+            fechaHoraSalida: "202110130815"
+            fechaSalida: "13/10/2021"
+            horaSalida: "08:15 de la Manana"
+            medioPago: "POS"
+            nombreClase: "SALON CAMA(12)"
+            nombreTerminalDestino: "CRUCE CALDERA"
+            nombreTerminalOrigen: "CENTINELA"
+            petService: false
+            piso: "1"
+            servicio: "IND05"
+            tipoVoucher: "WEB"
+            total: "22900"
+          -->
+          <hr />
+          <span>asiento:</span> {{ transaction.asiento }}<br />
+          <span>boleto:</span> {{ transaction.boleto }}<br />
+          <span>clase:</span> {{ transaction.clase }}<br />
+          <span>cliente:</span> {{ transaction.cliente }}<br />
+          <span>codigoSeguridad:</span> {{ transaction.codigoSeguridad }}<br />
+          <span>codigoTerminalDestino:</span> {{ transaction.codigoTerminalDestino
+          }}<br />
+          <span>codigoTerminalOrigen:</span> {{ transaction.codigoTerminalOrigen }}<br />
+          <span>codigoTransaccion:</span> {{ transaction.codigoTransaccion }}<br />
+          <span>diaSemana:</span> {{ transaction.diaSemana }}<br />
+          <span>fechaHoraSalida:</span> {{ transaction.fechaHoraSalida }}<br />
+          <span>fechaSalida:</span> {{ transaction.fechaSalida }}<br />
+          <span>horaSalida:</span> {{ transaction.horaSalida }}<br />
+          <span>medioPago:</span> {{ transaction.medioPago }}<br />
+          <span>nombreClase:</span> {{ transaction.nombreClase }}<br />
+          <span>nombreTerminalDestino:</span> {{ transaction.nombreTerminalDestino
+          }}<br />
+          <span>nombreTerminalOrigen:</span> {{ transaction.nombreTerminalOrigen }}<br />
+          <span>petService:</span> {{ transaction.petService }}<br />
+          <span>piso:</span> {{ transaction.piso }}<br />
+          <span>servicio:</span> {{ transaction.servicio }}<br />
+          <span>tipoVoucher:</span> {{ transaction.tipoVoucher }}<br />
+          <span>total:</span> {{ transaction.total }}<br />
+          <span>condicionesDeServicio:</span> {{ transaction.condicionesDeServicio
+          }}<br />
+          <hr />
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>

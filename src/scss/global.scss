@@ -1,0 +1,244 @@
+/* THEME IONIC */
+@import './theme/variables.scss';
+
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import '~@ionic/angular/css/core.css';
+
+/* Basic CSS for apps built with Ionic */
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+// STYLES CUSTOM :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+@import './utils/variables';
+@import './utils/typography';
+
+html.ios {
+  --ion-default-font: 'SF-Pro-Display-Regular', sans-serif;
+}
+html.md {
+  --ion-default-font: 'SF-Pro-Display-Regular', sans-serif;
+}
+
+.popover-content {
+  min-width: 500px !important;
+  .sc-ion-select-popover {
+    font-size: 30px;
+    padding: 15px;
+  }
+}
+
+ion-card {
+  background: transparent;
+  box-shadow: none;
+}
+
+.tc-card {
+  margin: 32px 0;
+  padding: 20px;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  border: 1px solid #fff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  &.card-title {
+    height: 147px;
+    padding: 0 !important;
+    margin: 0;
+    margin-bottom: 32px;
+    text-align: center;
+
+    h2 {
+      padding: 0;
+      margin: 0;
+      line-height: 147px;
+      color: #fff;
+      font-size: 48px;
+      font-family: 'SF-Pro-Display-Bold';
+    }
+  }
+}
+
+.modal-alert {
+  --max-width: 734px;
+  --max-height: 331px;
+
+  opacity: 1;
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+
+  .alert-wrapper {
+    padding: 70px 60px;
+    position: relative;
+    background: #fffff9;
+    border-radius: 25px;
+
+    .alert-head {
+      display: none;
+    }
+
+    .alert-message {
+      font-size: 30px;
+      padding: 0;
+    }
+
+    .alert-button-group {
+      padding: 0;
+    }
+
+    .btn-cancel {
+      content: '';
+      width: 45px;
+      height: 45px;
+      margin: 0;
+
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      background: url('/assets/icon/icon-close.png');
+    }
+  }
+}
+
+// Input and Select
+.item-input,
+.item-select {
+  height: 91px;
+  border-radius: 15px;
+
+  img {
+    margin: auto 20px;
+  }
+
+  ion-select ion-label {
+    font-size: 32px;
+  }
+}
+
+form ion-item {
+  --color: #003fa2;
+  --background: #fff;
+  --placeholder-color: #003fa2;
+
+  ion-icon {
+    color: #003fa2;
+    font-size: 30px;
+    margin: 0 20px;
+  }
+}
+
+ion-input,
+ion-select {
+  --placeholder-opacity: 1;
+  height: 91px;
+}
+
+ion-input input,
+ion-select,
+ion-input::placeholder,
+ion-select ion-label,
+ion-select-popover label {
+  font-size: 36px !important;
+}
+
+// Layout
+ion-content {
+  --offset-top: -160px !important;
+}
+
+// Button
+ion-button {
+  --opacity: 1;
+  height: 115px;
+
+  span {
+    color: #fff;
+    font-family: 'SF-Pro-Display-Bold';
+    font-size: 38px;
+  }
+
+  &.button-disabled {
+    --background: #c4c4c4 !important;
+    opacity: 1;
+  }
+}
+
+// Loading
+ion-progress-bar {
+  --progress-background: #003fa2;
+  --buffer-background: #fff;
+}
+
+.tc-service {
+  --background: #ebf3ff;
+  --color: #003fa2;
+  border: 1px solid #003fa2;
+  border-radius: 15px;
+
+  ion-row {
+    height: 118px;
+    width: -webkit-fill-available;
+
+    p {
+      margin: 0;
+      color: #003fa2;
+      font-family: 'SF-Pro-Display-Bold';
+
+      &:first-child {
+        margin-bottom: 5px;
+        font-size: 26px;
+      }
+
+      &:last-child {
+        font-size: 22px;
+      }
+    }
+
+    .col_icon {
+      text-align: -webkit-center;
+      font-size: xx-large;
+
+      img {
+        margin-bottom: 5px;
+      }
+    }
+
+    .col_price {
+      border-left: 1px solid #003fa2;
+
+      p {
+        text-align: center;
+        font-family: 'SF-Pro-Display-Regular';
+
+        &:first-child {
+          font-size: 26px;
+        }
+
+        &:last-child {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}

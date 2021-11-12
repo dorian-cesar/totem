@@ -1,0 +1,47 @@
+<ion-row class="choose-services ion-justify-content-center">
+  <ion-col class="ion-no-padding ion-align-self-center" size="12">
+    <div *ngIf="services.length; else isLoading">
+      <ion-item
+        class="tc-service"
+        *ngFor="let service of services"
+        (click)="selectService(service)"
+      >
+        <ion-row class="ion-padding-vertical ion-justify-content-center">
+          <ion-col class="ion-align-self-center" size="2">
+            <div class="ion-text-right">
+              <p>{{ service.horaSalida }}</p>
+              <p>{{ service.terminalOrigen }}</p>
+            </div>
+          </ion-col>
+
+          <ion-col class="col_icon ion-padding-horizontal ion-align-self-center" size="3">
+            <img src="/assets/icon/from-to.png" alt="Icon from-to" />
+          </ion-col>
+
+          <ion-col class="ion-align-self-center" size="3">
+            <div class="ion-text-left">
+              <p>{{ service.horaLlegada }}</p>
+              <p>{{ service.terminalDestino }}</p>
+            </div>
+          </ion-col>
+
+          <ion-col class="col_price ion-align-self-center" size="3">
+            <p>Desde</p>
+            <p>${{ minorPriceSeat(service) }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-item>
+    </div>
+
+    <ng-template #isLoading>
+      <ion-progress-bar
+        *ngIf="loading; else notFoundServices"
+        type="indeterminate"
+      ></ion-progress-bar>
+
+      <ng-template #notFoundServices>
+        <p class="not-found">No existen rutas para el viaje seleccionado</p>
+      </ng-template>
+    </ng-template>
+  </ion-col>
+</ion-row>

@@ -1,0 +1,119 @@
+<ion-grid class="confirmation">
+  <ion-row class="tc-card ion-justify-content-center">
+    <ion-col class="ion-align-self-center" size="12">
+      <ion-row class="ion-justify-content-center">
+        <ion-col
+          class="ticket-list"
+          *ngFor="let ticketView of ticketViewList; let i = index"
+          size="12"
+        >
+          <p class="travel-type">
+            Pasajes de {{ i === 0 ? 'ida' : 'vuelta' }}: confirme los datos
+          </p>
+
+          <ion-card class="ticket-container ion-no-margin">
+            <ion-card-header>
+              <ion-card-subtitle>
+                PASAJE DE {{ i === 0 ? 'IDA' : 'VUELTA' }}
+              </ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-row class="ticket ion-padding ion-align-self-end">
+              <ion-col size="8">
+                <ion-row
+                  *ngFor="let item of ticketView.items; let j = index"
+                  class="data ion-justify-content-start"
+                >
+                  <ion-col size="6" class="ion-text-end">
+                    <p class="title">{{ item.title }}:</p>
+                  </ion-col>
+                  <ion-col size="6" class="ion-text-start">
+                    <p class="description">{{ item.description }}</p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+
+              <ion-col size="4">
+                <ion-row class="price ion-justify-content-between">
+                  <ion-col size="12" class="ion-text-center">
+                    <img src="/assets/icon/logo-pullman.png" alt="Logo Pullman" />
+                  </ion-col>
+                  <ion-col size="12" class="ion-text-center ion-align-self-end">
+                    <p>
+                      <span class="subtotal">Subtotal: </span>
+                      <span class="price">{{ ticketView.subtotal }}</span>
+                    </p>
+                  </ion-col>
+                </ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-col>
+
+        <ion-col
+          *ngIf="confirmationList.length !== 2"
+          class="ion-align-self-center"
+          size="12"
+        >
+          <ion-card class="vuelta ion-no-margin" (click)="eventSwapTravel.emit()">
+            <ion-row class="ion-justify-content-center">
+              <ion-col class="ion-align-self-center" size="5">
+                <ion-button expand="block" type="submit" fill="solid">
+                  <strong>Selecionar vuelta</strong>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-row *ngIf="total; else loading" class="tc-card total ion-justify-content-center">
+    <ion-col class="ion-align-self-center" size="12">
+      <p class="discount-title" *ngIf="total.discount !== '$0'">
+        Usted tiene un descuento de {{ total.discount }}.
+      </p>
+
+      <ion-card>
+        <ion-row class="ion-justify-content-between">
+          <ion-col size="3" class="ion-text-start">
+            <p>Subtotal</p>
+          </ion-col>
+
+          <ion-col size="3" class="ion-text-end">
+            <p class="subtotal">{{ total.subtotal }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+      <ion-card>
+        <ion-row class="ion-justify-content-between">
+          <ion-col size="3" class="ion-text-start">
+            <p>Su beneficio</p>
+          </ion-col>
+
+          <ion-col size="3" class="ion-text-end">
+            <p class="discount">-{{ total.discount }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+
+      <ion-card>
+        <ion-row class="ion-justify-content-between">
+          <ion-col size="2" class="ion-text-start">
+            <p class="total-text">Total</p>
+          </ion-col>
+
+          <ion-col size="4" class="ion-text-end">
+            <p class="total">{{ total.total }}</p>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ng-template #loading>
+    <ion-progress-bar type="indeterminate"></ion-progress-bar>
+  </ng-template>
+</ion-grid>

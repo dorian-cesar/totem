@@ -1,0 +1,80 @@
+<div class="choose-travel">
+  <ion-item class="travel-type">
+    <ion-select
+      [value]="this.travelType"
+      interface="popover"
+      (ionChange)="this.travelType = $event.detail"
+    >
+      <ion-select-option value="ida">Sólo ida</ion-select-option>
+      <ion-select-option value="ida_vuelta">Ida y vuelta</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <form #form="ngForm" [formGroup]="travelForm" (ionChange)="formChange()">
+    <ion-grid class="ion-padding ion-justify-content-center">
+      <ion-row class="ion-padding ion-justify-content-center">
+        <ion-col class="ion-align-self-center" size="12">
+          <p>Origen</p>
+
+          <ion-item mode="ios">
+            <ion-icon name="locate" slot="start"></ion-icon>
+            <ion-select
+              formControlName="origen"
+              placeholder="Seleccione origen"
+              interface="popover"
+              (ionChange)="searchDestinyList($event)"
+              required
+            >
+              <ion-select-option *ngFor="let origin of originList" [value]="origin">
+                {{ origin.nombre }}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <p>Destino</p>
+
+          <ion-item mode="ios">
+            <ion-icon name="location" slot="start"></ion-icon>
+            <ion-select
+              formControlName="destino"
+              placeholder="Seleccione destino"
+              interface="popover"
+              required
+            >
+              <ion-select-option *ngFor="let destiny of destinyList" [value]="destiny">
+                {{ destiny.nombre }}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <p>Fecha de ida</p>
+
+          <ion-item mode="ios">
+            <ion-icon name="calendar" slot="start"></ion-icon>
+            <ion-input
+              formControlName="ida"
+              name="ida"
+              type="date"
+              placeholder="Seleccione fecha de ida"
+              required
+            ></ion-input>
+          </ion-item>
+
+          <div *ngIf="travelType === 'ida_vuelta'">
+            <p>Fecha de vuelta</p>
+
+            <ion-item mode="ios">
+              <ion-icon name="calendar" slot="start"></ion-icon>
+              <ion-input
+                formControlName="vuelta"
+                name="vuelta"
+                type="date"
+                placeholder="Seleccione fecha de vuelta"
+              ></ion-input>
+            </ion-item>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</div>

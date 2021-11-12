@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "totem-app",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

@@ -1,0 +1,79 @@
+.travel-detail {
+  --background: transparent;
+
+  ion-col.logout {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    ion-item {
+      --background: transparent;
+      position: absolute;
+      top: -10px;
+      right: 50px;
+
+      span {
+        color: #003fa2;
+        font-family: 'SF-Pro-Display-Bold';
+        font-size: 38px;
+        margin-right: 10px;
+      }
+
+      ion-icon {
+        color: #003fa2;
+        margin: 2px;
+        font-size: 38px;
+      }
+    }
+  }
+
+  ion-row.container {
+    margin: 40px 30px;
+
+    ion-button {
+      --color: white;
+      --background: orangered;
+      --border-radius: 63px;
+      --border-color: white;
+      --border-width: 1px;
+      --border-style: solid;
+      font-size: 38px;
+
+      &.back {
+        --background: white;
+        --color: orangered;
+      }
+    }
+
+    .tc-card {
+      margin-top: 32px 0;
+      padding: 20px;
+
+      &.travel {
+        padding: 50px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  ion-col.views {
+    p {
+      color: #fff;
+      font-size: 32px;
+      font-family: 'SF-Pro-Display-Bold';
+      margin-bottom: 5px;
+    }
+
+    form {
+      .center_icon {
+        height: 91px;
+        line-height: 91px;
+
+        background: #003fa2;
+        border-radius: 15px;
+        text-align: center;
+      }
+    }
+  }
+}
